@@ -1,0 +1,99 @@
+			API e Padrão REST
+
+Aplication Programming Interface
+- coleção de métodos disponibilizados por um serviço para interação indireta
+
+rotinas e padrões que dão acesso a sistema ou plataforma web
+tornar mais atrativo aos desenvolvedores o uso da plataforma
+apis tem diversas bibliotecas/ recursos -- programas de suporte
+
+
+PROPRIEDADES/ VANTAGENS DA API
+
+acesso de dados
+	acesso ao banco de dados não é trivial
+	facilita aos dados de um BD
+		envia mensagem requisitando os dados, que executa o arquivo dentro do server (parametros enviados pela API)
+		a resposta relacionadas a busca são enviadas de volta a API
+		a API imprime p o usuário os dados
+
+esconder complexidade
+	métodos especificos de acesso( operações complexas (rotinas e funções) )
+	transparente : comandos hardware // funções específicas do sistema
+	dev: foca na funcionalidade do app, não na construção
+
+estender funcionalidades
+	comunicação entre aplicativos
+
+segurança
+	permissão do acesso a dados
+
+	
+
+REpresentational State Transfer (REST)
+-- do autor da especificação do protocolo HTTP
+
+* vantagens da padronização
+-Independência da aplicação
+
+modelo REST
+
+	-client-server			|
+	-stateless			|
+	-cache				- constrains
+	-uniform interface		|
+	-layered system			|
+	-code on demand (opcional)	|
+
+(client-server)
+	separação
+	menor complexidade
+	organização dos devs
+	cliente - interface
+	server - armazenamento
+	portabilidade da interface do usuário
+	aumento da escalabilidade
+	simplifica os componentes dos servidores
+
+(stateless)
+	não precisa ir alem da REQUEST: fornecer completo entendimento p o servidor
+	visibilidade
+	confiabilidade
+	escalabilidade
+
+	escolha - tradeoff
+		repetição dos dados
+		per-interaction overhead
+		performance da rede x propriedades do REST
+		tradeoff
+		
+(cache)
+	objetivo: aumentar eficiencia da rede
+	reduz latência e sobrecarga por interação
+	label requests (cacheable or non)
+
+(uniform interface)
+	enfase de interface uniforme (generalidade)
+	restrições: identificação, manipulação, auto-descrição, HATEOAS (hypermedia as the engine of application state) - motor das interfaces
+
+	estado e elementos de dados (aspectos chave)
+
+(layered system)
+	encapsulamento, hierarquia -- proteção de dados
+
+(code on demand)
+	funcionalidade de clientes -- applets ou scripts
+	diminui visibilidade do sistema
+
+
+			
+			API JAVA
+API-HTTP
+
+permite requisiçãos de forma sincrona e assincrona
+pacote HTTP
+	HTTP client (define/cria o cliente)
+	HTTP request (classe de solicitações e utilização de métodos)
+	HTTP responde (resultado da solicitação HTTP)
+
+

@@ -1,0 +1,79 @@
+			PROTOCOLO DE HTTP
+
+Hyper Text Transfer Protocol (HTTP)
+- protocolo de comunicação
+
+lado do cliente -> browser - implementa o cliente http
+servidor -> host de objeto web
+
+cliente -- mensagens (request)objetos web
+servidor -- mensagens (response) tcp camada de transporte
+
+HTTP =	arquitetura client-server
+	stateless (só responde com o que foi requisitado)
+
+Métodos REQUEST
+	get - solicita (metadados) recurso do servidor
+	head - get sem corpo de resposta
+	post - envia entidade a um recurso (ex. preencher dados de cadastro)
+	delete
+	trace - loop-back do recurso
+	option - opcoes de comunicação
+	connect - tunelamento com o recurso por TLS
+	patch - modificação parcial do recurso
+
+	Métodos seguros
+		get, head e option
+
+RESPONSE 
+	Status code
+		200 = OK
+		301 = moved permanently (objeto em nova url)
+		400 = bad request (não entendeu a mensagem requerida)
+		404 = not found (inexistente)
+		505 = http version not supported (versão de protoclo não suportada)
+
+STATELESS HTTP
+	identificação do user == COOKIES
+		rastreamento e identificação (restrição ou fornecimento de funções)
+			usuários
+	
+	COMPONENTES - COOKIES
+		cookie header line
+		cookie file
+		banco de dados backend
+		
+
+			CONCEITOS BÁSICOS DE SEGURANÇA
+
+CRIPTOGRAFIA POR CHAVE
+
+	arquivo restrito a leitura/ não legíveis
+	++ código que "mistura/embaralha" os dados
+	===chave necessária p abrir o arquivo e ler
+
+	CRIPTOGRAFIA POR CHAVE
+		ASSIMÉTRICA
+			privada e publica = privada (assinatura - criptografia)
+					publica (verificação de autenticidade)
+		SIMÉTRICA
+			chave única privada(cifra de césar) = substituição de cada letra pela k-ésima letra do alfabeto
+			crifra de fluxo (sequencia de bits pseudo-aleatório // mapeamento 1 p 1)
+			cifra de bloco (ssl, pgp, ipsec)
+				encadeamento de cifras
+
+			certificado digital de autenticidade (entidade certificadora CA)
+			-alta confiabilidade
+			-vinculo de chave e entidade
+
+			
+			PROTOCOLO SSL
+
+Secure Socket Layer (SSL)
+- segurança para conexões TCP
+	confidencialidade, integridade e autenticidade end-point
+
+qual a importância do SSL?
+	impede listening e ataques ativos // pishing
+	fases: handshake, autentificade, ems (master secret key, tipo de cifra / chave simétrica)
+	
